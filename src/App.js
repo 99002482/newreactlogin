@@ -1,31 +1,32 @@
-import React from 'react';
-import './App.css'; 
-import Login from './Login'; 
-import Dashboard from './Dashboard'; 
-import {Redirect} from "react-router";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';   
-
+import React from 'react';  
+import './App.css';  
+import Login from './Login';  
+import Dashboard from './Dashboard';  
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';   
 function App() {  
+  return (  
 
-  return (    
+            <div className='container'>
+    <Router>    
 
-    <Router>  
+       
       
-      <Redirect to="/Login"/> 
+      <Redirect to="/Login" />
 
-        <Switch>
-          <Route exact path='/Login' component={Login} /> 
-        </Switch>    
+     <switch>
+     <Route path='/Login' component={Login} />    
+
+     </switch>
 
         <Switch>  
 
         <Route path='/Dashboard' component={Dashboard} />    
 
         </Switch>  
-
       
-
-    </Router>   
+    </Router> 
+    </div>
+   
 
   );  
 
